@@ -1,0 +1,67 @@
+#!/bin/bash
+
+show_help() {
+    cat << EOF
+
+ ____    ____     ___     ____
+| __ )  |  _ \   / _ \   / ___|
+|  _ \  | | | | | | | | | |
+| |_) | | |_| | | |_| | | |___
+|____/  |____/   \___/   \____|
+
+
+Usage: $(basename "$0") file.adoc
+
+Options:
+  -h, --help      Show this help message and exit
+  -v, --version   Show version information
+  -t, --template  Create a template document
+  -c, --convert   Convert an AsciiDoc file to PDF
+
+Examples:
+  $(basename "$0") --help
+  $(basename "$0") document.adoc
+EOF
+}
+
+VERSION="1.0"
+
+
+copy_template() {
+  cp /usr/share/bdoc/* .
+}
+
+
+while [[ $# -gt 0 ]]; do
+    case "$1" in
+        -h|--help)
+            show_help
+            exit 0
+            ;;
+        -v|--version)
+            echo "Version: $VERSION"
+            exit 0
+            ;;
+        -t|--template)
+            copy_template
+            echo "Template document 'template.adoc' created successfully."
+            echo "Theme file 'theme.yml' created successfully."
+            exit 0
+            ;;
+        -c|--convert)
+            if [[ -z "$2" ]]; then
+                echo "Error: --convert requires a value"
+                printf "Usage: %s --convert file.adoc\n" "$(basename "$0")"
+                exit 1
+            fi
+            asciidoctor-pdf -a pdf-theme=btheme.yml "$2"
+            shift 2
+            ;;
+        *)
+            echo "Unknown option: $1"
+            echo "Use --help for usage information."
+            exit 1
+            ;;
+    esac
+done
+

@@ -1,0 +1,61 @@
+= Sample Document
+
+== Introduction
+
+This is a sample document.
+
+It demonstrates:
+
+* Headings
+* Lists
+* Images
+* Tables
+* Source Code
+
+image::sample.png[Sample Image, width=300, align=center]
+
+== Employee Details
+
+[cols="1,2,1",options="header"]
+|===
+| ID | Name | Department
+
+| 101
+| Alice
+| Software
+
+| 102
+| Bob
+| Testing
+
+| 103
+| Charlie
+| Support
+|===
+
+<<<
+
+== Python Example
+
+[source,python]
+----
+def greet(name):
+    print(f"Hello, {name}")
+
+greet("World")
+----
+
+== Features
+
+. Easy to read
+. Lightweight markup
+. Supports PDF and HTML generation
+. Suitable for technical documentation
+
+NOTE: This is a sample note.
+
+TIP: You can convert this file to PDF.
+
+== Conclusion
+
+This is a simple sample document demonstrating the basic features.

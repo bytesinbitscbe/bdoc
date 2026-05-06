@@ -1,0 +1,130 @@
+extends: default
+
+# Full page red cube border
+# border:
+#     width: 1
+#     color: FF0000
+
+# -----------------------------
+# TITLE PAGE DESIGN
+# -----------------------------
+title-page:
+  text-align: center
+
+title-page-logo:
+  image: ./left-logo.png
+
+title-page-background-image: ./right-logo.png
+
+role:
+  title-page:
+    font-color: FF0000
+
+# Removes border from first page
+title-page-background-color: FFFFFF
+
+
+
+
+########### HEADER ############
+header:
+  height: 0.8in
+  border-color: FF0000
+  border-width: 1
+
+  font-size: 14
+  font-style: bold
+  font-color: FF0000
+
+  recto:
+    height: 0.75in
+    line-height: 1
+    right:
+      content: 'BYTESINBITS INSTITUTION'
+    left:
+      content: 'image:logo.jpeg[pdfwidth=0.5in]'
+
+
+  verso:
+    right:
+      content: 'BYTESINBITS INSTITUTION'
+    left:
+      content: 'image:logo.jpeg[pdfwidth=0.5in]'
+
+
+page:
+  margin: [0.8in, 0.8in, 1in, 0.8in]
+
+  # FULL PAGE BORDER (THIS IS THE KEY)
+  # border-color: FF0000
+  # border-width: 1
+
+########### FONT ############
+font:
+  catalog:
+    merge: true
+    Times New Roman:
+      normal: /usr/share/fonts/truetype/msttcorefonts/Times_New_Roman.ttf
+      bold: /usr/share/fonts/truetype/msttcorefonts/Times_New_Roman_Bold.ttf
+      italic: /usr/share/fonts/truetype/msttcorefonts/Times_New_Roman_Italic.ttf
+      bold_italic: /usr/share/fonts/truetype/msttcorefonts/Times_New_Roman_Bold_Italic.ttf
+
+base:
+  font-family: Times New Roman
+
+########### FONT SIZES ############
+base:
+  font-size: 12
+
+heading:
+  font-style: bold
+  line-height: 1.2
+
+# Chapter Title (==)
+heading-h2:
+  font-size: 16
+  font-style: bold
+
+# Topic Title (===)
+heading-h3:
+  font-size: 14
+  font-style: bold
+
+# Sub Topic Title (====)
+heading-h4:
+  font-size: 12
+  font-style: bold
+
+page:
+  margin: [0.8in, 0.8in, 1in, 0.8in]
+
+###########  FOOTER ############
+footer:
+  height: 0.7in
+  border-color: FF0000
+  border-width: 1
+
+  recto:
+    left:
+      content: |
+        Website: https://bytesinbits.in
+        
+
+    center:
+      content: ""
+
+    right:
+      content: |
+        Mail : bytesinbitescbe@gmail.com, Call:+917204805085, Call:+919443999076
+
+  verso:
+    left:
+      content: |
+        Website: https://bytesinbits.in
+
+    center:
+      content: ""
+
+    right:
+      content: |
+        Mail : bytesinbitescbe@gmail.com, Call:+917204805085, Call:+919443999076

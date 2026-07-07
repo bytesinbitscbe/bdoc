@@ -1,0 +1,8 @@
+Package: bdoc
+Version: 1.0
+Section: base
+Priority: optional
+Architecture: all
+Maintainer: bytesinbitscbe
+Description: bytesinbitscbe document file
+Depends: ruby, ttf-mscorefonts-installer | fonts-liberation | fonts-dejavu-core

@@ -28,7 +28,7 @@ VERSION="1.0"
 
 
 copy_template() {
-  cp /usr/share/bdoc/* .
+  cp /usr/share/bdoc/file.adoc .
 }
 
 
@@ -44,8 +44,7 @@ while [[ $# -gt 0 ]]; do
             ;;
         -t|--template)
             copy_template
-            echo "Template document 'template.adoc' created successfully."
-            echo "Theme file 'theme.yml' created successfully."
+            echo "Template document 'file.adoc' created successfully."
             exit 0
             ;;
         -c|--convert)
@@ -54,7 +53,7 @@ while [[ $# -gt 0 ]]; do
                 printf "Usage: %s --convert file.adoc\n" "$(basename "$0")"
                 exit 1
             fi
-            asciidoctor-pdf -a pdf-theme=btheme.yml "$2"
+            asciidoctor-pdf -a pdf-theme=/usr/share/bdoc/btheme.yml "$2"
             shift 2
             ;;
         *)

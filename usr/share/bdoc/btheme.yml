@@ -12,9 +12,9 @@ title-page:
   text-align: center
 
 title-page-logo:
-  image: ./left-logo.png
+  image: /usr/share/bdoc/left-logo.png
 
-title-page-background-image: ./right-logo.png
+title-page-background-image: /usr/share/bdoc/right-logo.png
 
 role:
   title-page:
